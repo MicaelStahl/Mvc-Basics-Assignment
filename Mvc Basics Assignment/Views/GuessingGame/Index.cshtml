@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h1>GuessingGame</h1>
+
+<h3>A random number is generated between 1 and 100. Test your luck!</h3>
+
+<form method="post">
+    <input name="number" type="number" min="1" max="100" placeholder="Take your guess.." style="width: 200px;" />
+    <br />
+    <button>Guess</button>
+</form>
+
+<br />
+<br />
+
+<h1>Result</h1>
+<table>
+    @if (ViewBag.YourGuess != null)
+    {
+        <tr>
+            <td>@ViewBag.YourGuess</td>
+        </tr>
+    }
+    @if (ViewBag.Guess != null)
+    {
+        <tr>
+            <td>@ViewBag.Guess</td>
+        </tr>
+    }
+    @if (ViewBag.NewGuess != null)
+    {
+        <tr>
+            <td>@ViewBag.NewGuess</td>
+        </tr>
+    }
+</table>
